@@ -56,7 +56,7 @@
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>Earlier in the week I needed to take four <code>u8</code>s assembled in a <code>Vec&lt;u8&gt;</code> and combine them to form a <code>u32</code>. The tricky part was that the needed to be concatenated and then converted in binary form.</p>
-<p>Documentation seems a little scarce on the topic and what I could find either had to cast a integer represented in decimal or no longer existed. I'm looking at you <code>std::num::from_str_radix</code>. I leapt onto the <a href="https://client01.chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust">IRC</a> to ask there.</p>
+<p>Documentation seems a little scarce on the topic and what I could find either had to cast an integer represented in decimal or no longer existed. I'm looking at you <code>std::num::from_str_radix</code>. I leapt onto the <a href="https://client01.chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust">IRC</a> to ask there.</p>
 <p>Turns out that <code>from_str_radix</code> wasn't that far off and it seems to have been refactored to another place in the codebase. Without further ado:</p>
 <p><code>u32::from_str_radix(somestr, 2)</code></p>
   </div><!-- /.entry-content -->
