@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>std::println!("about");</title>
+          <title>Rustmania</title>
         <meta charset="utf-8" />
         <link href="https://KieranHunt.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rustmania Full Atom Feed" />
+        <link href="https://KieranHunt.github.io/feeds/rust.atom.xml" type="application/atom+xml" rel="alternate" title="Rustmania Categories Atom Feed" />
 
         <link rel="stylesheet" href="https://KieranHunt.github.io/theme/css/rdark.css" />
 	<link rel="stylesheet" type="text/css" href="https://KieranHunt.github.io/theme/css/main.css" />
@@ -23,6 +24,11 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
+
+
+
+    <meta name="tags" content="rust" />
+
 </head>
 
 <body id="index" class="home">
@@ -30,14 +36,31 @@
                 <h1><a href="https://KieranHunt.github.io/">Rustmania <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li class="active"><a href="https://KieranHunt.github.io/pages/about.html">std::println!("about");</a></li>
+            <li><a href="https://KieranHunt.github.io/pages/about.html">std::println!("about");</a></li>
             <li><a href="https://KieranHunt.github.io/pages/me.html">std::println!("me");</a></li>
         </ul></nav><!-- /#menu -->
-    <h1>std::println!("about");</h1>
-    
-
-    <p>My intent is to use this site to share my findings as I learn more about the Rust programming language.</p>
-
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://KieranHunt.github.io/binary-string-to-int.html" rel="bookmark"
+         title="Permalink to Converting a String of Binary to an Integer">Converting a String of Binary to an Integer</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2014-07-17T12:55:00+02:00">
+      Thu 17 July 2014
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="https://KieranHunt.github.io/author/kieran-hunt.html">Kieran Hunt</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>Earlier in the week I needed to take four <code>u8</code>s assembled in a <code>Vec&lt;u8&gt;</code> and combine them to form a <code>u32</code>. The tricky part was that the needed to be concatenated and then converted in binary form.</p>
+<p>Documentation seems a little scarce on the topic and what I could find either had to cast a integer represented in decimal or no longer existed. I'm looking at you <code>std::num::from_str_radix</code>. I leapt onto the <a href="https://client01.chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust">IRC</a> to ask there.</p>
+<p>Turns out that <code>from_str_radix</code> wasn't that far off and it seems to have been refactored to another place in the codebase. Without further ado:</p>
+<p><code>u32::from_str_radix(somestr, 2)</code></p>
+  </div><!-- /.entry-content -->
+</section>
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
