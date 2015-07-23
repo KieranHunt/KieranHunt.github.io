@@ -39,6 +39,24 @@
 
 <ol id="post-list">
         <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="https://KieranHunt.github.io/digests.html" rel="bookmark" title="Permalink to Cryptographic Hash Digests">Cryptographic Hash Digests</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2015-07-23T09:23:00+02:00"> Thu 23 July 2015 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="https://KieranHunt.github.io/author/kieran-hunt.html">Kieran Hunt</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <p>If you're anything like me then you'll love a good cryptographic hash digest. A <a href="https://crates.io/crates/rust-crypto">great rust library</a> makes creating digests super easy. Rust-crypto is terrific.</p>
+<p><br /></p>
+<p>let to_be_hashed: &amp;[u8] = &amp;[0x0, 0x1, 0x2];</p>
+<p>let mut md5 = Md5::new();</p>
+<p>md5.input(to_be_hashed);</p>
+<p>let mut hashed =  md5.result_str();</p>
+<p>md5.reset();</p>
+<p><br /></p>
+<p>And as ...</p> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="https://KieranHunt.github.io/getters-and-setters.html" rel="bookmark" title="Permalink to getters and setters">getters and setters</a></h2> </header>
                 <footer class="post-info">
                     <abbr class="published" title="2015-07-20T22:13:00+02:00"> Mon 20 July 2015 </abbr>
