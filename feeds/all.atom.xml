@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rustmania</title><link href="https://KieranHunt.github.io/" rel="alternate"></link><link href="https://KieranHunt.github.io/feeds/all.atom.xml" rel="self"></link><id>https://KieranHunt.github.io/</id><updated>2015-07-23T09:23:00+02:00</updated><entry><title>Cryptographic Hash Digests</title><link href="https://KieranHunt.github.io/digests.html" rel="alternate"></link><updated>2015-07-23T09:23:00+02:00</updated><author><name>Kieran Hunt</name></author><id>tag:KieranHunt.github.io,2015-07-23:digests.html</id><summary type="html">&lt;p&gt;If you're anything like me then you'll love a good cryptographic hash digest. A &lt;a href="https://crates.io/crates/rust-crypto"&gt;great rust library&lt;/a&gt; makes creating digests super easy. Rust-crypto is terrific.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rustmania</title><link href="https://KieranHunt.github.io/" rel="alternate"></link><link href="https://KieranHunt.github.io/feeds/all.atom.xml" rel="self"></link><id>https://KieranHunt.github.io/</id><updated>2015-07-26T11:30:00+02:00</updated><entry><title>Loop Labels</title><link href="https://KieranHunt.github.io/loop-labels.html" rel="alternate"></link><updated>2015-07-26T11:30:00+02:00</updated><author><name>Kieran Hunt</name></author><id>tag:KieranHunt.github.io,2015-07-26:loop-labels.html</id><summary type="html">&lt;p&gt;Assigning labels to your loops can be very helpful. Generally you would use labels as a way of breaking out of some outer loop from within an inner loop. Without named loops doing that sort of thing would require a return statement or some kind of &lt;code&gt;if/else&lt;/code&gt; gymnastics.&lt;/p&gt;
+&lt;p&gt;The syntax for a loop label closely resembles Rust's &lt;a href="https://doc.rust-lang.org/book/lifetimes.html"&gt;lifetimes&lt;/a&gt;. An example of loop labels is as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fn main() {
+    &amp;#39;outer: loop {
+        println!(&amp;quot;Entered the outer loop&amp;quot;);
+
+        &amp;#39;inner: loop {
+            println!(&amp;quot;Entered the inner loop&amp;quot;);
+
+            // This would break only the inner loop
+            //break;
+
+            // This breaks the outer loop
+            break &amp;#39;outer;
+        }
+
+        println!(&amp;quot;This point will never be reached&amp;quot;);
+    }
+
+    println!(&amp;quot;Exited the outer loop&amp;quot;);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Code adapted from &lt;a href="http://rustbyexample.com/flow_control/loop/nested.html"&gt;this page&lt;/a&gt; from the excellent &lt;a href="http://rustbyexample.com/"&gt;Rust by Example&lt;/a&gt;.&lt;/p&gt;</summary><category term="rust"></category></entry><entry><title>Cryptographic Hash Digests</title><link href="https://KieranHunt.github.io/digests.html" rel="alternate"></link><updated>2015-07-23T09:23:00+02:00</updated><author><name>Kieran Hunt</name></author><id>tag:KieranHunt.github.io,2015-07-23:digests.html</id><summary type="html">&lt;p&gt;If you're anything like me then you'll love a good cryptographic hash digest. A &lt;a href="https://crates.io/crates/rust-crypto"&gt;great rust library&lt;/a&gt; makes creating digests super easy. Rust-crypto is terrific.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;let to_be_hashed: &amp;amp;[u8] = &amp;amp;[0x0, 0x1, 0x2];&lt;/p&gt;
 &lt;p&gt;let mut md5 = Md5::new();&lt;/p&gt;
