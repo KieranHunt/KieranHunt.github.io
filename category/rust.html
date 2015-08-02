@@ -48,7 +48,12 @@
                     </address>
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> <p>Rust, <a href="https://docs.python.org/3/library/functions.html#enumerate">like Python</a>, has a great feature called <a href="http://doc.rust-lang.org/std/iter/trait.Iterator.html#tymethod.enumerate">enumerate</a>.</p>
-<p>Enumerate allows for you to access the current value of an iterator as well as its index. </p> </div><!-- /.entry-content -->
+<p>Enumerate allows for you to access the current value of an iterator as well as its index.</p>
+<div class="highlight"><pre><span class="kd">let</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="o">!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">];</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">enumerate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;The {}th item is {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="https://KieranHunt.github.io/loop-labels.html" rel="bookmark" title="Permalink to Loop Labels">Loop Labels</a></h2> </header>
