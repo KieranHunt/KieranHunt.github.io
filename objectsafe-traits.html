@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Rustmania - Tags</title>
+          <title>Rustmania</title>
         <meta charset="utf-8" />
         <link href="https://KieranHunt.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rustmania Full Atom Feed" />
+        <link href="https://KieranHunt.github.io/feeds/rust.atom.xml" type="application/atom+xml" rel="alternate" title="Rustmania Categories Atom Feed" />
 
         <link rel="stylesheet" href="https://KieranHunt.github.io/theme/css/rdark.css" />
 	<link rel="stylesheet" type="text/css" href="https://KieranHunt.github.io/theme/css/main.css" />
@@ -23,6 +24,11 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
+
+
+
+    <meta name="tags" content="rust" />
+
 </head>
 
 <body id="index" class="home">
@@ -34,7 +40,25 @@
             <li><a href="https://KieranHunt.github.io/pages/me.html">std::println!("me");</a></li>
             <li><a href="https://KieranHunt.github.io/pages/resources.html">std::println!("resources");</a></li>
         </ul></nav><!-- /#menu -->
-    <h1>Tags for Rustmania</h1>        <li><a href="https://KieranHunt.github.io/tag/rust.html">rust</a> (8)</li>
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://KieranHunt.github.io/objectsafe-traits.html" rel="bookmark"
+         title="Permalink to Object-safe Traits">Object-safe Traits</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2015-08-17T14:46:00+02:00">
+      Mon 17 August 2015
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="https://KieranHunt.github.io/author/kieran-hunt.html">Kieran Hunt</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>Traits are one of Rust's hidden super powers. Creating objects using traits can be done if your traits are object-safe. The definition of an object safe trait is a trait which has no methods which take or return a value dependent on the implementor's own type. Its type must be known at compile time. This restriction is in place so that the compiler may make space for the object on the stack; this is not possible without knowing what the type of the object is.</p>
+  </div><!-- /.entry-content -->
+</section>
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
